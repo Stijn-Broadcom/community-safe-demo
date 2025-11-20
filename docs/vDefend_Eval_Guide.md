@@ -5,6 +5,16 @@ This guide outlines a structured Proof of Concept (POC) plan to evaluate **VMwar
 
 ---
 
+## 🏛️ Architecture Overview
+
+The test environment consists of three zones (Micro-segments). Traffic must flow strictly from Left to Right.
+
+* **Web Tier:** `TCP 80/443` (Ingress)
+* **App Tier:** `TCP 5000` (Middleware)
+* **DB Tier:** `TCP 5432` (Data)
+
+---
+
 ## 🧪 Test Scenarios
 
 ### Scenario 1: Zero Trust Micro-segmentation (DFW)
@@ -35,3 +45,14 @@ This guide outlines a structured Proof of Concept (POC) plan to evaluate **VMwar
 
 1.  **Attack:** Click **"DNS Tunneling"** or **"Port Scan"**.
 2.  **Validation:** Check **NSX NDR Dashboard** for MITRE ATT&CK T1048/T1046.
+
+---
+
+## 📝 Scorecard
+
+| Capability | Test Method | Pass/Fail |
+| :--- | :--- | :--- |
+| **Segmentation** | Block App-to-DB traffic via DFW. | |
+| **Exploit Block** | Trigger SQLi/Log4j via Testing Tab. | |
+| **Malware** | Download EICAR file via Testing Tab. | |
+| **Anomaly (NDR)** | Generate DNS Tunneling traffic. | |

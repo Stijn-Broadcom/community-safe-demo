@@ -2,8 +2,23 @@
 
 **CommunitySafe** is a purpose-built, 3-tier web application designed to demonstrate **VMware vDefend (formerly NSX) Distributed Firewall (DFW)** and **Advanced Threat Prevention (ATP)** capabilities on VMware Cloud Foundation (VCF).
 
+## 📸 Application Tour
+
+### 1. Resident View (Public)
+The public-facing portal for residents to view emergency alerts, fire danger levels, and live webcam feeds.
+![Resident View](docs/images/resident.png)
+
+### 2. Admin View (Internal)
+The secured console for emergency managers to broadcast alerts, update threat levels, and manage zone evacuation statuses.
+![Admin View](docs/images/admin.png)
+
+### 3. Testing View (Control Plane)
+The infrastructure diagnostic tool used to visualize network traffic flows (`Web -> App -> DB`) and inject malicious attack patterns for security testing.
+![Testing View](docs/images/testing.png)
+
+---
+
 ## 🎯 Demo Capabilities
-This application simulates a municipal emergency alert system to validate critical infrastructure security use cases:
 
 ### 1. Zero Trust & Micro-segmentation
 * **Scenario:** Enforce strict East-West traffic controls.
@@ -19,6 +34,13 @@ This application simulates a municipal emergency alert system to validate critic
 ### 3. Malware Prevention
 * **Scenario:** Prevent malicious file downloads at the Distributed Firewall.
 * **Feature:** The **"Malware Sim"** button attempts to download an EICAR test string, triggering NSX Malware Prevention engines.
+
+---
+
+## 📚 Documentation
+
+* **[Deployment Guide](docs/DEPLOYMENT_GUIDE.md):** Step-by-step instructions for deploying the VMs using OVAs or building from source.
+* **[vDefend Evaluation Guide](docs/vDefend_Eval_Guide.md):** A structured Proof of Concept (POC) test plan. It maps specific buttons in the "Testing" tab to vDefend capabilities (IDPS, Malware, NDR) with expected outcomes and validation steps.
 
 ---
 
