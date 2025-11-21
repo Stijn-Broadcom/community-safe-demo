@@ -6,11 +6,11 @@
 
 ### 1. Resident View (Public)
 The public-facing portal for residents to view emergency alerts, fire danger levels, and live webcam feeds.
-![Resident View](docs/images/resident.jpg)
+![Resident View](docs/images/resident.png)
 
 ### 2. Admin View (Internal)
 The secured console for emergency managers to broadcast alerts, update threat levels, and manage zone evacuation statuses.
-![Admin View](docs/images/admin.jpg)
+![Admin View](docs/images/admin.png)
 
 ### 3. Testing View (Control Plane)
 The infrastructure diagnostic tool used to visualize network traffic flows (`Web -> App -> DB`) and inject malicious attack patterns for security testing.
